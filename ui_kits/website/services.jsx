@@ -41,7 +41,7 @@ function ServicesGrid() {
   const toggle = (name) => setSel((s) => s.includes(name) ? s.filter((x) => x !== name) : [...s, name]);
 const request = () => {
   try { sessionStorage.setItem('ska_engagement', JSON.stringify(sel)); } catch (e) {}
-  window.location.href = 'consultation.html';
+  window.location.href = 'index.html#contact';
 };
   return (
     <section className="services services--page" id="services">
