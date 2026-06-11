@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Brand" name="Brand Direction — Terra" subtitle="Warm earth palette + compass-star mark + editorial serif (from your moodboard)" viewport="700x1010" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Sora:wght@300;400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{ --birch:#F1DDCB; --sand:#EAC891; --pollen:#CFA96F; --terra:#C85A17; --rojo:#AE431E; --olive:#6B8E23; --sage:#8B9D6B; --mustard:#D9A521; --coffee:#1A1A1A; --darkbg:#2C3A1C; }
+  body{ margin:0; background:var(--birch); font-family:'Sora',sans-serif; color:var(--coffee); }
+  .serif{ font-family:'Instrument Serif', Georgia, serif; }
+  .lbl{ font-family:'Montserrat',sans-serif; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
+  .star{ width:1em; height:1em; display:inline-block; fill:currentColor; vertical-align:-.12em; }
+
+  /* header band */
+  .hd{ background:var(--darkbg); color:var(--sand); padding:26px 28px; display:flex; align-items:center; gap:18px; position:relative; }
+  .hd .mark{ width:46px; height:46px; color:var(--terra); flex:none; }
+  .hd .n{ font-size:30px; line-height:1; color:var(--birch); }
+  .hd .d{ font-size:8px; color:var(--pollen); margin-top:6px; }
+  .hd .tag{ position:absolute; top:26px; right:28px; font-size:9px; color:var(--sand); }
+
+  .pad{ padding:24px 28px; }
+  .cap{ font-size:10px; color:var(--rojo); margin:0 0 14px; }
+
+  /* palette */
+  .pal{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+  .sw{ height:96px; border-radius:4px; padding:10px; display:flex; flex-direction:column; justify-content:flex-end; position:relative; overflow:hidden; }
+  .sw .nm{ font-family:'Montserrat',sans-serif; font-weight:700; font-size:10px; letter-spacing:.04em; text-transform:uppercase; }
+  .sw .hx{ font-size:9.5px; opacity:.85; margin-top:2px; }
+  .sw .star{ position:absolute; top:8px; right:8px; width:14px; height:14px; opacity:.6; }
+
+  /* type specimen */
+  .specimen{ background:var(--darkbg); color:var(--birch); border-radius:6px; padding:26px 28px; }
+  .specimen .big{ font-size:46px; font-style:italic; line-height:1.02; margin:0; color:var(--birch); }
+  .specimen .big em{ color:var(--terra); }
+  .specimen .meta{ font-size:11px; color:var(--pollen); margin:14px 0 0; font-family:'Sora',sans-serif; }
+  .typerow{ display:flex; gap:26px; margin-top:16px; }
+  .typecard .t{ font-size:13px; font-weight:600; }
+  .typecard .s{ font-size:11px; color:var(--sage); }
+
+  /* motif */
+  .motif{ display:flex; align-items:center; gap:22px; }
+  .motif .s1{ width:54px; height:54px; color:var(--terra); }
+  .motif .s2{ width:38px; height:38px; color:var(--olive); }
+  .motif .s3{ width:26px; height:26px; color:var(--rojo); }
+  .motif p{ font-size:12px; line-height:1.5; color:var(--sage); margin:0; max-width:30em; }
+
+  .note{ font-size:11.5px; line-height:1.55; color:var(--sage); margin:0; }
+  .note b{ color:var(--coffee); }
+  hr{ border:0; border-top:1px solid rgba(52,40,34,.15); margin:0; }
+</style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute"><symbol id="star" viewBox="0 0 100 100"><path d="M 50 3 L 53.83 40.76 L 69.09 30.91 L 59.24 46.17 L 97 50 L 59.24 53.83 L 69.09 69.09 L 53.83 59.24 L 50 97 L 46.17 59.24 L 30.91 69.09 L 40.76 53.83 L 3 50 L 40.76 46.17 L 30.91 30.91 L 46.17 40.76 Z"/><circle cx="50" cy="50" r="5.2"/></symbol></svg>
+
+  <div class="hd">
+    <svg class="star mark"><use href="#star"></use></svg>
+    <div><div class="n serif">Syed Kamran Azmi</div><div class="d lbl">EXECUTIVE CONSTRUCTION ADVISORY</div></div>
+    <div class="tag lbl">Terra · Direction D</div>
+  </div>
+
+  <div class="pad">
+    <p class="cap lbl">Palette · warm earth, building materials</p>
+    <div class="pal">
+      <div class="sw" style="background:var(--terra);color:#fff"><svg class="star"><use href="#star"></use></svg><span class="nm">Clay</span><span class="hx">#C85A17</span></div>
+      <div class="sw" style="background:var(--rojo);color:#fff"><svg class="star"><use href="#star"></use></svg><span class="nm">Chile Rojo</span><span class="hx">#AE431E</span></div>
+      <div class="sw" style="background:var(--olive);color:#fff"><svg class="star"><use href="#star"></use></svg><span class="nm">Cactus Green</span><span class="hx">#6B8E23</span></div>
+      <div class="sw" style="background:var(--sage);color:#fff"><svg class="star"><use href="#star"></use></svg><span class="nm">Sage</span><span class="hx">#8B9D6B</span></div>
+      <div class="sw" style="background:var(--mustard);color:#fff"><svg class="star"><use href="#star"></use></svg><span class="nm">Mustard</span><span class="hx">#D9A521</span></div>
+      <div class="sw" style="background:var(--sand);color:var(--coffee)"><span class="nm">Sunset Sand</span><span class="hx">#EAC891</span></div>
+      <div class="sw" style="background:var(--birch);color:var(--coffee);border:1px solid rgba(26,26,26,.12)"><span class="nm">Terracotta</span><span class="hx">#F1DDCB</span></div>
+      <div class="sw" style="background:var(--coffee);color:var(--sand)"><svg class="star"><use href="#star"></use></svg><span class="nm">Ink</span><span class="hx">#1A1A1A</span></div>
+    </div>
+  </div>
+
+  <div class="pad" style="padding-top:0">
+    <p class="cap lbl">Type · editorial vintage serif</p>
+    <div class="specimen">
+      <p class="big serif">Shaping the <em>Cities</em> of Tomorrow</p>
+      <p class="meta">Instrument Serif (italic) — confident, elegant at hero scale</p>
+    </div>
+    <div class="typerow">
+      <div class="typecard"><div class="t serif">Aa Gg Rr 1985</div><div class="s lbl">Display · Instrument Serif</div></div>
+      <div class="typecard"><div class="t">Aa Gg Rr 1985</div><div class="s lbl">Body · Sora</div></div>
+      <div class="typecard"><div class="t lbl" style="font-size:13px">EST · 40 YRS</div><div class="s lbl">Label · Montserrat</div></div>
+    </div>
+  </div>
+
+  <div class="pad" style="padding-top:0">
+    <p class="cap lbl">Mark &amp; motif · compass-star / sun</p>
+    <div class="motif">
+      <svg class="star s1"><use href="#star"></use></svg>
+      <svg class="star s2"><use href="#star"></use></svg>
+      <svg class="star s3"><use href="#star"></use></svg>
+      <p>An eight-point compass-star — navigation, vision, and the sun over a skyline. Works as the logo mark, a bullet, a divider tick, and a loading motif.</p>
+    </div>
+  </div>
+
+  <hr>
+  <div class="pad">
+    <p class="note"><b>Treatment:</b> warm film-grain texture, vintage muted photography, organic blob label shapes, and generous birch-paper space. Confident, grounded, premium — earth and craft over corporate gloss.</p>
+  </div>
+</body>
+</html>

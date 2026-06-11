@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Header / Nav" subtitle="Sticky translucent bar" viewport="700x90" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; background:var(--paper); padding:0; font-family:var(--font-body); }
+  .nav { display:flex; align-items:center; justify-content:space-between; padding:18px 30px; background:rgba(255,255,255,.82); backdrop-filter:blur(10px); border-bottom:1px solid var(--border-soft); }
+  .brand { display:flex; flex-direction:column; line-height:1; }
+  .brand .n { font-family:var(--font-display); font-weight:600; font-size:24px; color:var(--fg1); }
+  .brand .d { font-family:var(--font-label); font-weight:600; font-size:8px; letter-spacing:.2em; color:var(--teal); margin-top:3px; }
+  .links { display:flex; gap:28px; align-items:center; }
+  .links a { font-family:var(--font-label); font-weight:600; font-size:12px; letter-spacing:.05em; color:var(--fg2); }
+  .links a.active { color:var(--teal); }
+  .links a.cta { font-family:var(--font-label); font-weight:600; font-size:12px; letter-spacing:.04em; background:var(--teal); color:#fff; padding:11px 20px; border-radius:var(--r-md); }
+</style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="brand"><span class="n">Syed Kamran Azmi</span><span class="d">EXECUTIVE CONSTRUCTION ADVISORY</span></div>
+    <div class="links">
+      <a class="active">Expertise</a>
+      <a>Projects</a>
+      <a>Story</a>
+      <a>Services</a>
+      <a class="cta">Start Your Consultation</a>
+    </div>
+  </nav>
+</body>
+</html>

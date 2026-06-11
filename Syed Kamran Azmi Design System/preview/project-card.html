@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Project Cards" subtitle="Auto image slideshow + hover accent" viewport="700x320" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; background:var(--paper); padding:24px 26px; font-family:var(--font-body); }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  .card { background:var(--white); border:1px solid var(--border-soft); border-radius:var(--r-md); overflow:hidden; box-shadow:var(--shadow-sm); transition:box-shadow var(--dur) var(--ease), transform var(--dur) var(--ease); }
+  .card:hover { box-shadow:var(--shadow-md); transform:translateY(-3px); }
+  /* slideshow */
+  .show { position:relative; aspect-ratio:16/10; overflow:hidden; }
+  .slides { display:flex; height:100%; transition:transform var(--dur-slow) var(--ease); }
+  .slide { min-width:100%; height:100%; display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,.85); }
+  .slide i { width:30px; height:30px; }
+  .s0 { background:linear-gradient(135deg,#8a3a10,#c85a17); }
+  .s1 { background:linear-gradient(135deg,#3a4a24,#6b8e23); }
+  .s2 { background:linear-gradient(135deg,#8a5f12,#d9a521); }
+  .cap { position:absolute; left:14px; bottom:12px; white-space:nowrap; font-family:var(--font-label); font-size:9px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:#fff; opacity:.9; }
+  .dots { position:absolute; right:12px; bottom:12px; display:flex; gap:6px; }
+  .dot { width:7px; height:7px; background:rgba(255,255,255,.45); cursor:pointer; transition:all var(--dur); }
+  .dot.on { background:#fff; width:18px; }
+  .nav { position:absolute; top:50%; transform:translateY(-50%); width:30px; height:30px; background:rgba(255,255,255,.85); border:none; display:flex; align-items:center; justify-content:center; cursor:pointer; opacity:0; transition:opacity var(--dur); color:var(--ink); }
+  .show:hover .nav { opacity:1; }
+  .prev { left:8px; } .next { right:8px; }
+  .accent { position:absolute; left:0; bottom:0; width:0; height:3px; background:var(--teal); transition:width var(--dur) var(--ease); z-index:2; }
+  .card:hover .accent { width:100%; }
+  .body { padding:14px 18px 18px; }
+  .loc { font-family:var(--font-label); font-size:10px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--copper); }
+  .ttl { font-family:var(--font-display); font-weight:700; font-size:22px; letter-spacing:-.01em; color:var(--fg1); margin:5px 0 5px; line-height:1.05; }
+  .sec { font-family:var(--font-body); font-size:12.5px; color:var(--fg3); }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="card">
+      <div class="show" data-show>
+        <div class="slides">
+          <div class="slide s0"><i data-lucide="building-2"></i></div>
+          <div class="slide s1"><i data-lucide="image"></i></div>
+          <div class="slide s2"><i data-lucide="layout-grid"></i></div>
+        </div>
+        <span class="cap">Gallery · 1 / 3</span>
+        <button class="nav prev"><i data-lucide="chevron-left" style="width:16px;height:16px"></i></button>
+        <button class="nav next"><i data-lucide="chevron-right" style="width:16px;height:16px"></i></button>
+        <div class="dots"></div>
+        <div class="accent"></div>
+      </div>
+      <div class="body"><span class="loc">Pointe-Noire, Congo</span><div class="ttl">Pointe Anglaise</div><span class="sec">Luxury Residential Complex</span></div>
+    </div>
+    <div class="card">
+      <div class="show" data-show>
+        <div class="slides">
+          <div class="slide s1"><i data-lucide="store"></i></div>
+          <div class="slide s0"><i data-lucide="image"></i></div>
+          <div class="slide s2"><i data-lucide="building"></i></div>
+        </div>
+        <span class="cap">Gallery · 1 / 3</span>
+        <button class="nav prev"><i data-lucide="chevron-left" style="width:16px;height:16px"></i></button>
+        <button class="nav next"><i data-lucide="chevron-right" style="width:16px;height:16px"></i></button>
+        <div class="dots"></div>
+        <div class="accent"></div>
+      </div>
+      <div class="body"><span class="loc">Doha, Qatar</span><div class="ttl">Doha Festival City</div><span class="sec">Commercial · Retail</span></div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>
+    lucide.createIcons();
+    document.querySelectorAll('[data-show]').forEach((show, si) => {
+      const slidesEl = show.querySelector('.slides');
+      const n = slidesEl.children.length;
+      const dotsEl = show.querySelector('.dots');
+      const cap = show.querySelector('.cap');
+      let i = 0, timer;
+      for (let k=0;k<n;k++){ const d=document.createElement('span'); d.className='dot'+(k===0?' on':''); d.onclick=(e)=>{e.stopPropagation();go(k);}; dotsEl.appendChild(d); }
+      const dots=[...dotsEl.children];
+      function go(k){ i=(k+n)%n; slidesEl.style.transform=`translateX(-${i*100}%)`; dots.forEach((d,j)=>d.classList.toggle('on',j===i)); cap.textContent=`Gallery · ${i+1} / ${n}`; }
+      function start(){ timer=setInterval(()=>go(i+1), 2600 + si*400); }
+      show.querySelector('.next').onclick=(e)=>{e.stopPropagation();go(i+1);};
+      show.querySelector('.prev').onclick=(e)=>{e.stopPropagation();go(i-1);};
+      show.addEventListener('mouseenter',()=>clearInterval(timer));
+      show.addEventListener('mouseleave',start);
+      start();
+    });
+  </script>
+</body>
+</html>

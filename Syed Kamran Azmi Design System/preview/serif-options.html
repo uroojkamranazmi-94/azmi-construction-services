@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Type" name="Headline Serif Options" subtitle="DM Serif Display / Playfair / Bodoni Moda" viewport="700x250" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../colors_and_type.css">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Serif+Display:ital@0;1&family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,500&display=swap" rel="stylesheet">
+<style>
+  body{ margin:0; background:var(--paper); font-family:var(--font-body); color:var(--ink); padding:24px 26px; }
+  .opt{ display:flex; align-items:center; gap:20px; padding:18px 0; border-bottom:1px solid var(--border-soft); position:relative; }
+  .opt:last-child{ border-bottom:0; }
+  .spec{ font-size:38px; line-height:1.04; color:var(--ink); margin:0; flex:1; }
+  .spec em{ color:var(--teal); }
+  .meta{ width:150px; flex:none; }
+  .meta .nm{ font-family:var(--font-label); font-weight:700; font-size:11px; letter-spacing:.04em; color:var(--ink); }
+  .meta .note{ font-family:var(--font-body); font-size:11px; color:var(--ink-3); margin-top:4px; line-height:1.4; }
+  .badge{ display:inline-block; font-family:var(--font-label); font-size:7.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#fff; background:var(--copper); padding:3px 6px; margin-top:6px; }
+  .dm{ font-family:'Instrument Serif', serif; font-style:italic; }
+  .pf{ font-family:'Playfair Display', serif; font-weight:600; }
+  .bd{ font-family:'Bodoni Moda', serif; font-weight:500; }
+  .cap{ font-family:var(--font-label); font-size:10px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--copper); margin:0 0 6px; }
+</style>
+</head>
+<body>
+  <p class="cap">Headline serif · pick a direction</p>
+  <div class="opt">
+    <div class="meta"><div class="nm">Instrument Serif</div><div class="note">Confident, elegant, italic.</div><span class="badge">In use</span></div>
+    <p class="spec dm">Shaping the <em>Cities</em> of Tomorrow</p>
+  </div>
+  <div class="opt">
+    <div class="meta"><div class="nm">Playfair Display</div><div class="note">Classic, authoritative, refined.</div></div>
+    <p class="spec pf">Shaping the <em>Cities</em> of Tomorrow</p>
+  </div>
+  <div class="opt">
+    <div class="meta"><div class="nm">Bodoni Moda</div><div class="note">Fashion-editorial, dramatic contrast.</div></div>
+    <p class="spec bd">Shaping the <em>Cities</em> of Tomorrow</p>
+  </div>
+</body>
+</html>

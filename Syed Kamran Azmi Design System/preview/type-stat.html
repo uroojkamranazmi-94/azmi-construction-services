@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Type" name="Stat Numerals" subtitle="Animated counter style" viewport="700x165" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; background:var(--white); padding:24px 26px; font-family:var(--font-body); }
+  .row { display:flex; gap:40px; }
+  .stat { display:flex; flex-direction:column; gap:4px; }
+  .num { font-family:var(--font-display); font-weight:600; font-size:58px; line-height:1; letter-spacing:-.02em; color:var(--fg1); }
+  .num .u { color:var(--copper); }
+  .cap { font-family:var(--font-label); font-size:11px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--fg3); }
+  .tick { width:26px; height:2px; background:var(--copper); margin-bottom:4px; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="stat"><div class="tick"></div><span class="num">40<span class="u">+</span></span><span class="cap">Years</span></div>
+    <div class="stat"><div class="tick"></div><span class="num">5<span class="u">x</span></span><span class="cap">Revenue Growth</span></div>
+    <div class="stat"><div class="tick"></div><span class="num">5</span><span class="cap">Continents</span></div>
+    <div class="stat"><div class="tick"></div><span class="num">100<span class="u">+</span></span><span class="cap">Projects</span></div>
+  </div>
+</body>
+</html>

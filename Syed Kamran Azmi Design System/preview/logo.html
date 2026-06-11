@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Brand" name="Wordmark" subtitle="Light & dark lockups" viewport="700x150" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; font-family:var(--font-body); display:grid; grid-template-columns:1fr 1fr; }
+  .cell { padding:30px 28px; display:flex; flex-direction:column; gap:6px; justify-content:center; }
+  .light { background:var(--white); }
+  .dark { background:var(--blueprint); }
+  .n { font-family:var(--font-display); font-weight:600; font-size:30px; line-height:1; }
+  .bn { display:flex; align-items:center; gap:12px; }
+  .star { width:34px; height:34px; flex:none; }
+  .rule { width:42px; height:2px; background:var(--copper); margin:9px 0 7px; }
+  .d { font-family:var(--font-label); font-weight:600; font-size:9px; letter-spacing:.22em; }
+  .light .n { color:var(--ink); } .light .d { color:var(--teal); } .light .star { color:var(--teal); }
+  .dark .n { color:#fff; } .dark .d { color:var(--teal-300); } .dark .star { color:var(--teal-300); }
+</style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute"><symbol id="star" viewBox="0 0 100 100"><path d="M 50 3 L 53.83 40.76 L 69.09 30.91 L 59.24 46.17 L 97 50 L 59.24 53.83 L 69.09 69.09 L 53.83 59.24 L 50 97 L 46.17 59.24 L 30.91 69.09 L 40.76 53.83 L 3 50 L 40.76 46.17 L 30.91 30.91 L 46.17 40.76 Z" fill="currentColor"/><circle cx="50" cy="50" r="5.2" fill="currentColor"/></symbol></svg>
+  <div class="cell light">
+    <div class="bn"><svg class="star"><use href="#star"></use></svg><span class="n">Syed Kamran Azmi</span></div>
+    <div class="rule"></div>
+    <span class="d">EXECUTIVE CONSTRUCTION ADVISORY</span>
+  </div>
+  <div class="cell dark">
+    <div class="bn"><svg class="star"><use href="#star"></use></svg><span class="n">Syed Kamran Azmi</span></div>
+    <div class="rule"></div>
+    <span class="d">EXECUTIVE CONSTRUCTION ADVISORY</span>
+  </div>
+</body>
+</html>

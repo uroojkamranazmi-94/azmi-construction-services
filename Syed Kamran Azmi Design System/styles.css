@@ -1,0 +1,6 @@
+/* ============================================================
+   Syed Kamran Azmi — Design System
+   styles.css · canonical entry point
+   Consumers link THIS file; it pulls in all foundational tokens.
+   ============================================================ */
+@import url('colors_and_type.css');

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Colors" name="Foundation Neutrals" subtitle="Cream base + warm sand neutrals" viewport="700x150" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; background:var(--white); padding:22px 24px; font-family:var(--font-body); }
+  .grid { display:grid; grid-template-columns:repeat(6,1fr); gap:14px; }
+  .sw { display:flex; flex-direction:column; gap:8px; }
+  .chip { height:64px; border-radius:var(--r-md); border:1px solid var(--border-soft); }
+  .name { font-family:var(--font-label); font-size:11px; font-weight:600; letter-spacing:.04em; color:var(--fg1); text-transform:uppercase; }
+  .hex { font-family:var(--font-body); font-size:11px; color:var(--fg3); }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="sw"><div class="chip" style="background:var(--white)"></div><span class="name">White</span><span class="hex">#FFFFFF</span></div>
+    <div class="sw"><div class="chip" style="background:var(--paper)"></div><span class="name">Terracotta</span><span class="hex">#F1DDCB</span></div>
+    <div class="sw"><div class="chip" style="background:var(--mist)"></div><span class="name">Wash</span><span class="hex">#E9CDB6</span></div>
+    <div class="sw"><div class="chip" style="background:var(--cloud)"></div><span class="name">Sand</span><span class="hex">#E4DCCD</span></div>
+    <div class="sw"><div class="chip" style="background:var(--silver)"></div><span class="name">Border</span><span class="hex">#D0C6B4</span></div>
+    <div class="sw"><div class="chip" style="background:var(--steel)"></div><span class="name">Steel</span><span class="hex">#9C9384</span></div>
+  </div>
+</body>
+</html>

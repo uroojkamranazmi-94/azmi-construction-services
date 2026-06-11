@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Buttons" subtitle="Chamfered cut-corner, hover sweep + arrow glide" viewport="700x170" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; background:var(--white); padding:24px 26px; font-family:var(--font-body); }
+  .row { display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin-bottom:18px; }
+  .btn { position:relative; overflow:hidden; font-family:var(--font-label); font-weight:600; font-size:12.5px; letter-spacing:.08em; text-transform:uppercase; padding:15px 30px; border:none; cursor:pointer; color:#fff; display:inline-flex; align-items:center; gap:10px;
+    --notch:11px; clip-path:polygon(var(--notch) 0,100% 0,100% calc(100% - var(--notch)),calc(100% - var(--notch)) 100%,0 100%,0 var(--notch));
+    transition:background var(--dur) var(--ease), color var(--dur) var(--ease), box-shadow var(--dur) var(--ease), transform var(--dur) var(--ease); }
+  .btn::before { content:""; position:absolute; top:0; left:-120%; width:55%; height:100%; background:linear-gradient(100deg,transparent,rgba(255,255,255,.4),transparent); transform:skewX(-18deg); transition:left var(--dur-slow) var(--ease); }
+  .btn:hover::before { left:135%; }
+  .btn i { width:16px; height:16px; transition:transform var(--dur) var(--ease); }
+  .btn:hover i { transform:translateX(4px); }
+  .primary { background:var(--teal); }
+  .primary:hover { background:var(--teal-700); box-shadow:var(--shadow-teal); transform:translateY(-2px); }
+  .ghost { background:transparent; color:var(--teal); box-shadow:inset 0 0 0 1.5px var(--teal); }
+  .ghost:hover { background:var(--teal); color:#fff; transform:translateY(-2px); }
+  .copper { background:var(--copper); }
+  .copper:hover { background:var(--copper-700); transform:translateY(-2px); }
+  .link { background:none; border:none; color:var(--teal); padding:8px 0; font-family:var(--font-label); font-weight:600; font-size:12.5px; letter-spacing:.08em; text-transform:uppercase; display:inline-flex; align-items:center; gap:9px; cursor:pointer; transition:gap var(--dur); }
+  .link:hover { gap:14px; }
+  .link i { width:15px; height:15px; }
+  .hint { font-family:var(--font-body); font-size:11.5px; color:var(--fg3); margin:6px 0 0; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <button class="btn primary">Start Your Consultation <i data-lucide="arrow-right"></i></button>
+    <button class="btn ghost">View Projects</button>
+    <button class="btn copper">Download Profile</button>
+    <button class="link">Read his story <i data-lucide="arrow-right"></i></button>
+  </div>
+  <p class="hint">Chamfered dual-cut corners · hover for the light sweep + arrow glide</p>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

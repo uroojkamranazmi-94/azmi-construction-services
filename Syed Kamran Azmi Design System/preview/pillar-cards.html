@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Brand Pillar Cards" subtitle="Click to activate — reveals focus areas" viewport="700x250" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; background:var(--paper); padding:24px 26px; font-family:var(--font-body); }
+  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  .card { background:var(--white); border:1px solid var(--border-soft); border-radius:var(--r-md); padding:22px 20px 22px; position:relative; overflow:hidden; cursor:pointer; transition:box-shadow var(--dur) var(--ease), transform var(--dur) var(--ease); }
+  .card::before { content:""; position:absolute; top:0; left:0; width:100%; height:3px; background:var(--teal); transform:scaleX(0); transform-origin:left; transition:transform var(--dur) var(--ease); }
+  .card:hover { box-shadow:var(--shadow-md); transform:translateY(-3px); }
+  .card.on::before { transform:scaleX(1); }
+  .card.on { box-shadow:var(--shadow-md); }
+  .ico { color:var(--steel); transition:color var(--dur), transform var(--dur) var(--ease); }
+  .card.on .ico { color:var(--teal); transform:translateY(-2px); }
+  .top { display:flex; align-items:center; justify-content:space-between; }
+  .idx { font-family:var(--font-label); font-size:11px; font-weight:700; letter-spacing:.1em; color:var(--copper); }
+  .name { font-family:var(--font-label); font-weight:700; font-size:17px; letter-spacing:.18em; color:var(--fg1); margin:14px 0 8px; }
+  .blurb { font-family:var(--font-body); font-size:13px; line-height:1.55; color:var(--fg2); margin:0; }
+  .more { max-height:0; overflow:hidden; transition:max-height var(--dur) var(--ease), opacity var(--dur); opacity:0; }
+  .card.on .more { max-height:90px; opacity:1; }
+  .tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; }
+  .tag { font-family:var(--font-label); font-size:9px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--teal); background:var(--teal-50); padding:5px 9px; }
+</style>
+</head>
+<body>
+  <div class="grid" id="g">
+    <div class="card on" data-i="0">
+      <div class="top"><span class="idx">01</span><span class="ico"><i data-lucide="layers" style="width:22px;height:22px"></i></span></div>
+      <div class="name">CORE</div>
+      <p class="blurb">Foundational operations expertise. Deep command of construction fundamentals, P&amp;L, and delivery.</p>
+      <div class="more"><div class="tags"><span class="tag">Operations</span><span class="tag">P&amp;L</span><span class="tag">Delivery</span></div></div>
+    </div>
+    <div class="card" data-i="1">
+      <div class="top"><span class="idx">02</span><span class="ico"><i data-lucide="building-2" style="width:22px;height:22px"></i></span></div>
+      <div class="name">URBAN</div>
+      <p class="blurb">City-scale vision. Shaping metropolitan futures across five continents.</p>
+      <div class="more"><div class="tags"><span class="tag">Master Planning</span><span class="tag">Global Cities</span></div></div>
+    </div>
+    <div class="card" data-i="2">
+      <div class="top"><span class="idx">03</span><span class="ico"><i data-lucide="ruler" style="width:22px;height:22px"></i></span></div>
+      <div class="name">STRUCTURE</div>
+      <p class="blurb">Precision, integrity, strategic rigor. Built to last — for cities and enterprises alike.</p>
+      <div class="more"><div class="tags"><span class="tag">Quality Control</span><span class="tag">Rigor</span></div></div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>
+    lucide.createIcons();
+    const cards = [...document.querySelectorAll('.card')];
+    cards.forEach(c => c.addEventListener('click', () => {
+      cards.forEach(x => x.classList.remove('on'));
+      c.classList.add('on');
+    }));
+  </script>
+</body>
+</html>

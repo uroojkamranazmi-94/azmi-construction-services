@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Colors" name="Semantic Color Tokens" subtitle="bg / surface / fg / accent roles" viewport="700x210" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; background:var(--white); padding:22px 24px; font-family:var(--font-body); }
+  .grid { display:grid; grid-template-columns:repeat(2,1fr); gap:10px 28px; }
+  .item { display:flex; align-items:center; gap:12px; }
+  .dot { width:30px; height:30px; border-radius:var(--r-sm); border:1px solid var(--border-soft); flex:none; }
+  .tok { font-family:var(--font-body); font-size:13px; color:var(--fg1); font-weight:500; }
+  .desc { font-family:var(--font-body); font-size:12px; color:var(--fg3); }
+  .lbl { display:flex; flex-direction:column; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="item"><span class="dot" style="background:var(--bg)"></span><span class="lbl"><span class="tok">--bg</span><span class="desc">page · paper</span></span></div>
+    <div class="item"><span class="dot" style="background:var(--surface)"></span><span class="lbl"><span class="tok">--surface</span><span class="desc">cards · white</span></span></div>
+    <div class="item"><span class="dot" style="background:var(--bg-alt)"></span><span class="lbl"><span class="tok">--bg-alt</span><span class="desc">alt section · mist</span></span></div>
+    <div class="item"><span class="dot" style="background:var(--bg-dark)"></span><span class="lbl"><span class="tok">--bg-dark</span><span class="desc">dark · deep green</span></span></div>
+    <div class="item"><span class="dot" style="background:var(--fg1)"></span><span class="lbl"><span class="tok">--fg1</span><span class="desc">primary text</span></span></div>
+    <div class="item"><span class="dot" style="background:var(--fg2)"></span><span class="lbl"><span class="tok">--fg2</span><span class="desc">secondary text</span></span></div>
+    <div class="item"><span class="dot" style="background:var(--fg3)"></span><span class="lbl"><span class="tok">--fg3</span><span class="desc">tertiary · captions</span></span></div>
+    <div class="item"><span class="dot" style="background:var(--border)"></span><span class="lbl"><span class="tok">--border</span><span class="desc">dividers · silver</span></span></div>
+    <div class="item"><span class="dot" style="background:var(--accent)"></span><span class="lbl"><span class="tok">--accent</span><span class="desc">teal · primary</span></span></div>
+    <div class="item"><span class="dot" style="background:var(--accent-2)"></span><span class="lbl"><span class="tok">--accent-2</span><span class="desc">copper · sparing</span></span></div>
+  </div>
+</body>
+</html>

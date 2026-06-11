@@ -1,0 +1,182 @@
+/* ============================================================
+   Syed Kamran Azmi — Design System
+   colors_and_type.css  ·  Foundational + semantic tokens
+   ============================================================ */
+
+/* ---- Fonts (loaded from Google Fonts) — APEX type ----
+   Display : Instrument Serif (italic)  — bold, confident, elegant at hero scale
+   Body/UI : Space Grotesk              — clean, geometric, modern
+   Label   : Space Grotesk (600/700)    — stats, project names, service titles
+   If licensed font files are added to /fonts, swap the @import for @font-face. */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* ===========================================================
+     COLOR — RAW PALETTE
+     =========================================================== */
+
+  /* Foundation — cream base & warm sand neutrals */
+  --white:        #ffffff;
+  --paper:        #f1ddcb;   /* LIGHT TERRACOTTA — primary page background */
+  --mist:         #e9cdb6;   /* deeper terracotta wash — alt sections */
+  --taupe-50:     #efe8dd;   /* lightest warm fill */
+  --taupe:        #d9cdbb;   /* warm sand secondary */
+  --taupe-300:    #c2b6a1;   /* deeper sand */
+  --cloud:        #e4dccd;   /* warm separators, fills */
+  --silver:       #d0c6b4;   /* warm borders, dividers */
+  --steel:        #9c9384;   /* muted warm text, icons */
+
+  /* Ink — deep charcoal text scale */
+  --ink:          #1a1a1a;   /* primary text */
+  --ink-2:        #3a352f;   /* secondary text */
+  --ink-3:        #6b6358;   /* tertiary / captions */
+
+  /* PRIMARY — terracotta / clay (BOLD dominant; remaps the --teal slots) */
+  --teal-50:      #f8e3d6;
+  --teal-100:     #f0c9b0;
+  --teal-300:     #e3a877;   /* light clay — accent on dark sections */
+  --teal:         #c85a17;   /* PRIMARY terracotta — CTAs, links, key UI */
+  --teal-bright:  #d97634;   /* brighter clay / hover-light */
+  --teal-700:     #a4440f;   /* pressed / deep clay */
+  --teal-900:     #6e2f0c;   /* deepest clay */
+
+  /* SECONDARY — olive / cactus green (remaps the --copper slots) */
+  --copper-50:    #eef1e3;
+  --copper-200:   #c8d2a6;
+  --copper:       #6b8e23;   /* olive / cactus green — secondary accent */
+  --copper-bright:#7da028;   /* brighter green / hover */
+  --copper-700:   #51691a;   /* deep olive */
+
+  /* MUSTARD — optional small accent pop */
+  --mustard:      #d9a521;
+  --mustard-700:  #b5851a;
+
+  /* DARK — cinematic warm near-black espresso (remaps --blueprint) */
+  --blueprint:    #1c130d;   /* espresso near-black — dramatic, cinematic */
+  --blueprint-2:  #2a1d14;   /* raised dark surface */
+  --blueprint-line: rgba(226,199,156,0.12); /* warm sand grid line */
+
+  /* Functional */
+  --success:      #5f8a2e;
+  --focus-ring:   rgba(200,90,23,0.42);
+
+  /* ===========================================================
+     SEMANTIC COLOR
+     =========================================================== */
+  --bg:           var(--paper);
+  --bg-alt:       var(--mist);
+  --bg-dark:      var(--blueprint);
+  --surface:      var(--white);
+  --fg1:          var(--ink);     /* primary text */
+  --fg2:          var(--ink-2);   /* secondary text */
+  --fg3:          var(--ink-3);   /* tertiary text */
+  --fg-on-dark:   #f3ecdf;
+  --fg-on-dark-2: #bfc4a6;
+  --border:       var(--silver);
+  --border-soft:  var(--cloud);
+  --accent:       var(--teal);
+  --accent-2:     var(--copper);
+  --link:         var(--teal);
+
+  /* ===========================================================
+     TYPOGRAPHY — FAMILIES
+     =========================================================== */
+  --font-display: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  --font-body:    'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-label:   'Space Grotesk', system-ui, sans-serif;
+
+  /* TYPE SCALE (desktop) — display uses serif, rest use sans */
+  --t-display:   clamp(3.4rem, 7.5vw, 7rem);    /* hero headline */
+  --t-h1:        clamp(2.8rem, 5vw, 4.75rem);
+  --t-h2:        clamp(2.3rem, 4vw, 3.6rem);
+  --t-h3:        1.5rem;
+  --t-h4:        1.25rem;
+  --t-lead:      1.25rem;    /* intro paragraph */
+  --t-body:      1.0625rem;  /* 17px base */
+  --t-small:     0.9375rem;
+  --t-label:     0.75rem;    /* montserrat eyebrow/labels, uppercase */
+  --t-stat:      clamp(2.75rem, 5vw, 4.25rem); /* animated counters */
+
+  --lh-tight:    1.04;
+  --lh-snug:     1.18;
+  --lh-body:     1.62;
+  --tracking-label: 0.18em;
+  --tracking-tight: -0.02em;
+
+  /* ===========================================================
+     SPACING SCALE (4px base)
+     =========================================================== */
+  --sp-1: 4px;   --sp-2: 8px;   --sp-3: 12px;  --sp-4: 16px;
+  --sp-5: 24px;  --sp-6: 32px;  --sp-7: 48px;  --sp-8: 64px;
+  --sp-9: 96px;  --sp-10: 128px; --sp-11: 160px;
+  --section-y: clamp(72px, 10vw, 160px);   /* vertical section rhythm */
+  --gutter:    clamp(20px, 5vw, 64px);      /* page side gutter */
+  --maxw:      1240px;                       /* content max width */
+
+  /* ===========================================================
+     RADIUS — architectural, restrained (mostly sharp w/ slight soften)
+     =========================================================== */
+  --r-none: 0px;
+  --r-sm:   2px;
+  --r-md:   4px;
+  --r-lg:   8px;
+  --r-pill: 999px;
+
+  /* ===========================================================
+     ELEVATION — soft, low, neutral-cool shadows
+     =========================================================== */
+  --shadow-xs: 0 1px 2px rgba(20,30,40,0.06);
+  --shadow-sm: 0 2px 8px rgba(20,30,40,0.06), 0 1px 2px rgba(20,30,40,0.04);
+  --shadow-md: 0 8px 24px rgba(20,30,40,0.08), 0 2px 6px rgba(20,30,40,0.04);
+  --shadow-lg: 0 20px 48px rgba(20,30,40,0.12), 0 6px 14px rgba(20,30,40,0.06);
+  --shadow-teal: 0 16px 40px rgba(200,90,23,0.34);
+
+  /* MOTION */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);   /* gentle ease-out */
+  --ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 160ms;
+  --dur:      280ms;
+  --dur-slow: 560ms;
+}
+
+/* ============================================================
+   SEMANTIC ELEMENT STYLES  (apply via classes)
+   ============================================================ */
+
+.ds-eyebrow {
+  font-family: var(--font-label);
+  font-size: var(--t-label);
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.ds-eyebrow--copper { color: var(--accent-2); }
+
+.ds-display {
+  font-family: var(--font-display);
+  font-size: var(--t-display);
+  font-weight: 600;
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg1);
+}
+.ds-h1 { font-family: var(--font-display); font-weight: 600; font-size: var(--t-h1); line-height: var(--lh-snug); letter-spacing: var(--tracking-tight); color: var(--fg1); }
+.ds-h2 { font-family: var(--font-display); font-weight: 600; font-size: var(--t-h2); line-height: var(--lh-snug); color: var(--fg1); }
+.ds-h3 { font-family: var(--font-body); font-weight: 600; font-size: var(--t-h3); line-height: 1.3; color: var(--fg1); }
+.ds-h4 { font-family: var(--font-label); font-weight: 600; font-size: var(--t-h4); line-height: 1.3; color: var(--fg1); }
+
+.ds-lead { font-family: var(--font-body); font-weight: 300; font-size: var(--t-lead); line-height: 1.55; color: var(--fg2); }
+.ds-body { font-family: var(--font-body); font-weight: 400; font-size: var(--t-body); line-height: var(--lh-body); color: var(--fg2); }
+.ds-small { font-family: var(--font-body); font-size: var(--t-small); line-height: 1.5; color: var(--fg3); }
+
+.ds-stat {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--t-stat);
+  line-height: 1;
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg1);
+}
+
+a { color: var(--link); text-decoration: none; }
