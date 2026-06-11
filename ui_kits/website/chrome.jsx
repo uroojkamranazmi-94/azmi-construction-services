@@ -74,7 +74,7 @@ function Footer() {
             <div className="footer__col">
               <span className="footer__h">Contact</span>
               <a href="mailto:syedkamranazmi@yahoo.com"><i data-lucide="mail" style={{ width: 14, height: 14 }}></i> syedkamranazmi@yahoo.com</a>
-              <a href="#"><i data-lucide="linkedin" style={{ width: 14, height: 14 }}></i> /in/kamran-azmi</a>
+              <a href="https://www.linkedin.com/in/kamran-azmi/"><i data-lucide="linkedin" style={{ width: 14, height: 14 }}></i> /in/kamran-azmi</a>
             </div>
           </div>
         </div>
