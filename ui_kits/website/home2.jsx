@@ -77,13 +77,20 @@ function Contact() {
     } catch (e) {}
   }, []);
   useLucide(sent);
-  const submit = (e) => {
-    e.preventDefault();
-    /* Collect the data — email backend to be wired later (e.g. via Vercel). */
-    const data = Object.fromEntries(new FormData(e.target).entries());
-    try { console.log('Consultation request', data); } catch (err) {}
-    setSent(true);
-  };
+const submit = async (e) => {
+  e.preventDefault();
+  const data = Object.fromEntries(new FormData(e.target).entries());
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    if (res.ok) setSent(true);
+  } catch (err) {
+    console.error('Error:', err);
+  }
+};
   return (
     <section className="contact" id="contact">
       <div className="contact__grid-bg"></div>
