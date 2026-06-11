@@ -53,10 +53,12 @@ const request = async () => {
         preferred: 'Email',
       }),
     });
-    if (res.ok) alert('Engagement request sent! Kamran will be in touch shortly.');
+    if (res.ok) {
+      try { sessionStorage.setItem('scrollToContact', 'true'); } catch (e) {}
+      window.location.href = 'index.html';
+    }
   } catch (err) {
     console.error('Error:', err);
-    alert('Failed to send request');
   }
 };
   return (
