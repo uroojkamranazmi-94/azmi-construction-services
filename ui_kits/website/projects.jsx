@@ -75,7 +75,7 @@ function ProjectsCTA() {
         <Eyebrow copper light>Have a project in mind?</Eyebrow>
         <h2 className="dcta__title">Let's deliver the next landmark.</h2>
         <p className="dcta__lead">Four decades of complex, multi-phase delivery — at your service.</p>
-        <Button icon="arrow-right" href="index.html#contact">Start a Consultation</Button>
+        <Button icon="arrow-right" href="consultation.html">Start a Consultation</Button>
       </div>
     </section>
   );
