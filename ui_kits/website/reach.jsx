@@ -208,7 +208,7 @@ function ReachCTA() {
         <Eyebrow copper light>Entering a new market?</Eyebrow>
         <h2 className="dcta__title">Cross-border delivery, de-risked.</h2>
         <p className="dcta__lead">Procurement, compliance, quality, and team-building — set up right, from the ground up.</p>
-        <Button icon="arrow-right" href="index.html#contact">Start a Consultation</Button>
+        <Button icon="arrow-right" href="consultation.html">Start a Consultation</Button>
       </div>
     </section>
   );
