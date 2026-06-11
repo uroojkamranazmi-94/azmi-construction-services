@@ -54,8 +54,7 @@ const request = async () => {
       }),
     });
     if (res.ok) {
-      try { sessionStorage.setItem('scrollToContact', 'true'); } catch (e) {}
-      window.location.href = 'index.html';
+      window.location.href = 'consultation.html';
     }
   } catch (err) {
     console.error('Error:', err);
