@@ -39,9 +39,25 @@ function ServicesGrid() {
   const [sel, setSel] = useStateSv([]);
   useLucide(sel.length);
   const toggle = (name) => setSel((s) => s.includes(name) ? s.filter((x) => x !== name) : [...s, name]);
-const request = () => {
-  try { sessionStorage.setItem('ska_engagement', JSON.stringify(sel)); } catch (e) {}
-  window.location.href = 'index.html#contact';
+const request = async () => {
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: 'Service Engagement Request',
+        email: 'syedkamranazmi@yahoo.com',
+        phone: '',
+        company: '',
+        scope: 'Requested Services: ' + sel.join(', '),
+        preferred: 'Email',
+      }),
+    });
+    if (res.ok) alert('Engagement request sent! Kamran will be in touch shortly.');
+  } catch (err) {
+    console.error('Error:', err);
+    alert('Failed to send request');
+  }
 };
   return (
     <section className="services services--page" id="services">
