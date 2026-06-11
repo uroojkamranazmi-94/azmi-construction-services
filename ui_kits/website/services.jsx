@@ -40,7 +40,9 @@ function ServicesGrid() {
   useLucide(sel.length);
   const toggle = (name) => setSel((s) => s.includes(name) ? s.filter((x) => x !== name) : [...s, name]);
 const request = async () => {
+  console.log('Request clicked, selected:', sel);
   try {
+    console.log('Sending fetch to /api/contact');
     const res = await fetch('/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -53,8 +55,12 @@ const request = async () => {
         preferred: 'Email',
       }),
     });
+    console.log('Response status:', res.status);
     if (res.ok) {
+      console.log('Success! Redirecting to consultation.html');
       window.location.href = 'consultation.html';
+    } else {
+      console.log('Response not ok');
     }
   } catch (err) {
     console.error('Error:', err);
