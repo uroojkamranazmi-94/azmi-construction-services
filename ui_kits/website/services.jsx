@@ -39,10 +39,10 @@ function ServicesGrid() {
   const [sel, setSel] = useStateSv([]);
   useLucide(sel.length);
   const toggle = (name) => setSel((s) => s.includes(name) ? s.filter((x) => x !== name) : [...s, name]);
-  const request = () => {
-    try { sessionStorage.setItem('ska_engagement', JSON.stringify(sel)); } catch (e) {}
-    window.location.href = 'index.html#contact';
-  };
+const request = () => {
+  try { sessionStorage.setItem('ska_engagement', JSON.stringify(sel)); } catch (e) {}
+  window.location.href = 'consultation.html';
+};
   return (
     <section className="services services--page" id="services">
       <div className="wrap">
