@@ -18,8 +18,8 @@ function Hero({ onNav }) {
           <Button icon="arrow-right" href="#featured">Explore Projects</Button>
           <Button variant="ghost-dark" icon="calendar" href="index.html#contact">Start a Consultation</Button>
         </div>
-        <div className="hero__stats">
-          {[{ n: 40, s: '+', c: 'Years' }, { n: 4, s: '', c: 'Continents' }, { n: 5, s: 'x', c: 'Revenue' }, { n: 400, s: '%', c: 'Ready-Mix Growth' }].map((x, i) => (
+      <div className="hero__stats">
+          {[{ n: 40, s: '+', c: 'Years' }, { n: 5, s: '', c: 'Countries' }, { n: 5, s: 'x', c: 'Revenue' }, { n: 400, s: '%', c: 'Ready-Mix Growth' }].map((x, i) => (
             <div className="hero__stat" key={i}><span className="num"><Counter to={x.n} suffix={x.s} /></span><span className="cap">{x.c}</span></div>
           ))}
         </div>
