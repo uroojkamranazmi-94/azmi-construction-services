@@ -43,7 +43,7 @@ function ServicesGrid() {
   // Hardcoded related projects for each service
   const SERVICE_PROJECTS = {
     'Executive Advisory': ['pointe-anglaise', 'saarc-chamber', 'doha-festival'],
-    'Ready-Mix Concrete & Precast Operations': ['redco-precast', 'redco-readymix', 'nlc-izhar'],
+    'Readymix Concrete & Precast Operations': ['redco-precast', 'redco-readymix', 'nlc-izhar'],
     'Operational Optimization': ['polygon', 'msheireb', 'port-grand'],
     'Project Leadership': ['msheireb', 'amaryllis', 'silver-oaks'],
     'Team & Talent Development': ['uac', 'eighteen', 'nust-hostels'],
