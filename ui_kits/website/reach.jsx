@@ -153,32 +153,28 @@ function ReachMapSection() {
               <div className="reach2__stat"><span className="v"><Counter to={cur.projects.length} /></span><span className="k">Projects</span></div>
             </div>
           </div>
-         {cur.projects.length > 0 ? (
-  <>
-    <p className="reach2__note">{cur.projects.length} project{cur.projects.length > 1 ? 's' : ''} delivered in {cur.city}, {cur.country}.</p>
-    <div className="reach2__projects">
-      {cur.projects.map((p) => (
-        <a key={p.id} className="reach2__proj" href={`project.html?id=${p.id}`} data-hover>
-          <span className={`reach2__proj-ic tone${p.tone}`}><i data-lucide={p.ico} style={{ width: 18, height: 18 }}></i></span>
-          <span className="reach2__proj-bd">
-            <span className="reach2__proj-n">{p.name}</span>
-            <span className="reach2__proj-m">{p.sector}</span>
-          </span>
-          <i data-lucide="arrow-up-right" className="reach2__proj-go" style={{ width: 16, height: 16 }}></i>
-        </a>
-      ))}
-    </div>
-  </>
-) : (
-  <>
-    {cur.key === 'abu-dhabi' && (
-      <p className="reach2__note">Precast construction and ready-mix concrete operations. Further information available upon request.</p>
-    )}
-    {cur.key === 'kuwait' && (
-      <p className="reach2__note">Development of temporary housing and military camp facilities for the Armed Forces. Further information available upon request.</p>
-    )}
-  </>
-)}
+          {cur.key === 'abu-dhabi' ? (
+            <p className="reach2__note">Precast construction and ready-mix concrete operations. Further information available upon request.</p>
+          ) : cur.key === 'kuwait' ? (
+            <p className="reach2__note">Development of temporary housing and military camp facilities for the Armed Forces. Further information available upon request.</p>
+          ) : (
+            <>
+              <p className="reach2__note">{cur.projects.length} project{cur.projects.length > 1 ? 's' : ''} delivered in {cur.city}, {cur.country}.</p>
+              <div className="reach2__projects">
+                {cur.projects.map((p) => (
+                  <a key={p.id} className="reach2__proj" href={`project.html?id=${p.id}`} data-hover>
+                    <span className={`reach2__proj-ic tone${p.tone}`}><i data-lucide={p.ico} style={{ width: 18, height: 18 }}></i></span>
+                    <span className="reach2__proj-bd">
+                      <span className="reach2__proj-n">{p.name}</span>
+                      <span className="reach2__proj-m">{p.sector}</span>
+                    </span>
+                    <i data-lucide="arrow-up-right" className="reach2__proj-go" style={{ width: 16, height: 16 }}></i>
+                  </a>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
               <a key={p.id} className="reach2__proj" href={`project.html?id=${p.id}`} data-hover>
                 <span className={`reach2__proj-ic tone${p.tone}`}><i data-lucide={p.ico} style={{ width: 18, height: 18 }}></i></span>
                 <span className="reach2__proj-bd">
