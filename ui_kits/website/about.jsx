@@ -119,7 +119,7 @@ function Bio() {
         </Reveal>
         <Reveal delay={100} className="bio__body">
           <p>Kamran Azmi's 40-year career spans construction, real estate development, and operations leadership across five continents. He has progressed from technical mastery to strategic enterprise leadership, managing multimillion-dollar projects, multinational teams, and complex international operations.</p>
-          <p>A recognized specialist in ready-mix concrete operations, he has repeatedly turned batching plants into high-margin profit centers — a discipline that helped drive 400% growth at Parkland in Kinshasa in just three years.</p>
+          <p>A recognized specialist in ready-mix concrete operations, he has repeatedly transformed batching plants into high-margin profit centers across multiple markets, applying strategic operational discipline and P&L management to drive substantial profitability gains.</p>
           <p>His trajectory reflects disciplined growth: each role building on the last, each region expanding his understanding of how to deliver excellence across different markets and operating environments. Today, he serves as an executive advisor to enterprises undertaking ambitious urban development projects globally.</p>
         </Reveal>
       </div>
