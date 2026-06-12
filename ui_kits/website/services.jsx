@@ -3,7 +3,7 @@ const { useState: useStateSv, useEffect: useEffectSv, useRef: useRefSv } = React
 
 const SERVICES = [
   { ico: 'compass', name: 'Executive Advisory', exKey: 'strat', desc: 'Strategic guidance for boards, owners, and leadership teams navigating complex builds.' },
-  { ico: 'layers', name: 'Ready-Mix Concrete & Precast Operations', exKey: 'pcd', desc: 'Standing up, turning around, and scaling readymix business and precast facilities into high-margin profit centers.' },
+  { ico: 'layers', name: 'Readymix Concrete & Precast Operations', exKey: 'pcd', desc: 'Scaling readymix business and precast facilities into high-margin profit centers.' },
   { ico: 'settings-2', name: 'Operational Optimization', exKey: 'ops', desc: 'Process, procurement, and delivery efficiency engineered at scale.' },
   { ico: 'hard-hat', name: 'Project Leadership', exKey: 'pde', desc: 'Delivery excellence on complex, multi-phase, fast-tracked programs.' },
   { ico: 'users', name: 'Team & Talent Development', exKey: 'wf', desc: 'Building durable, high-performing site organizations that outlast the project.' },
