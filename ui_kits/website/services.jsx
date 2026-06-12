@@ -39,33 +39,27 @@ function ServicesGrid() {
   const [sel, setSel] = useStateSv([]);
   useLucide(sel.length);
   const toggle = (name) => setSel((s) => s.includes(name) ? s.filter((x) => x !== name) : [...s, name]);
-const request = async () => {
-  console.log('Request clicked, selected:', sel);
-  try {
-    console.log('Sending fetch to /api/contact');
-    const res = await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        name: 'Service Engagement Request',
-        email: 'syedkamranazmi@yahoo.com',
-        phone: '',
-        company: '',
-        scope: 'Requested Services: ' + sel.join(', '),
-        preferred: 'Email',
-      }),
-    });
-    console.log('Response status:', res.status);
-    if (res.ok) {
-      console.log('Success! Redirecting to consultation.html');
-      window.location.href = 'consultation.html';
-    } else {
-      console.log('Response not ok');
+  
+  // Hardcoded related projects for each service
+  const SERVICE_PROJECTS = {
+    'Executive Advisory': ['pointe-anglaise', 'saarc-chamber', 'doha-festival'],
+    'Ready-Mix Concrete & Precast Operations': ['redco-precast', 'redco-readymix', 'nlc-izhar'],
+    'Operational Optimization': ['polygon', 'msheireb', 'port-grand'],
+    'Project Leadership': ['msheireb', 'amaryllis', 'silver-oaks'],
+    'Team & Talent Development': ['uac', 'eighteen', 'nust-hostels'],
+    'Business Expansion': ['polygon', 'pointe-anglaise', 'metro-cash-carry'],
+    'International Market Entry': ['okapi', 'doha-festival', 'port-grand'],
+  };
+
+  const request = () => {
+    if (sel.length) {
+      try {
+        sessionStorage.setItem('ska_engagement', JSON.stringify(sel));
+      } catch (e) {}
     }
-  } catch (err) {
-    console.error('Error:', err);
-  }
-};
+    window.location.href = 'consultation.html';
+  };
+
   return (
     <section className="services services--page" id="services">
       <div className="wrap">
@@ -74,7 +68,8 @@ const request = async () => {
         </SectionHead>
         <div className="services__grid">
           {SERVICES.map((s) => {
-            const rel = projectsByExpertise(s.exKey, 3);
+            const relIds = SERVICE_PROJECTS[s.name] || [];
+            const rel = relIds.map((id) => PROJECTS.find((p) => p.id === id)).filter(Boolean);
             return (
               <Reveal key={s.name} className={`svc-card ${sel.includes(s.name) ? 'is-sel' : ''}`}>
                 <div className="svc-card__inner">
