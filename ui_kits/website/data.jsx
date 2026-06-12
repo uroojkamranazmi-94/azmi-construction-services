@@ -203,7 +203,6 @@ const GALLERY = {
   'redco-readymix': ['images/redco-readymix-1.jpg'],
   'nlc-izhar': ['images/nlc-izhar-1.jpg'],
   'parkland-readymix': ['images/parkland-readymix-1.jpg'],
-  ],
 };
 
 /* full project name for the few that were shortened above (used in titles) */
