@@ -166,7 +166,13 @@ function ReachMapSection() {
               <p className="reach2__note">Development of temporary housing and military camp facilities for the Armed Forces. Further information available upon request.</p>
             ) : (
               <>
-                <p className="reach2__note">{city.projects.length} project{city.projects.length > 1 ? 's' : ''} delivered in {city.city}, {city.country}.</p>
+                 <p className="reach2__note">
+                  {city.key === 'kinshasa' && 'Multi-sector development spanning residential, commercial, and mixed-use urban projects. Leadership across project delivery, P&L management, and local team development.'}
+                  {city.key === 'islamabad' && 'Institutional and commercial construction including federal facilities, corporate offices, and residential developments. Operations leadership and strategic project execution.'}
+                  {city.key === 'rawalpindi' && 'Corporate infrastructure and office development. Strategic project delivery for major industrial enterprise.'}
+                  {city.key === 'karachi' && 'Waterfront hospitality and commercial development. Real estate development and operational excellence.'}
+                  {city.key === 'doha' && 'Large-scale commercial and mixed-use developments. Strategic planning and complex multi-phase delivery.'}
+                </p>
                 <div className="reach2__projects">
                   {city.projects.map((p) => (
                     <a key={p.id} className="reach2__proj" href={`project.html?id=${p.id}`} data-hover>
