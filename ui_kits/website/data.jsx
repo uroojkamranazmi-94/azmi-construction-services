@@ -254,7 +254,26 @@ const LOCATION_GROUPS = LOCATIONS.map((l) => ({
   projects: PROJECTS.filter((p) => p.locationKey === l.key).sort(byRank),
 })).sort((a, b) => b.projects.length - a.projects.length);
 
+/* ---- Country groups (for country-level navigation) ---- */
+const COUNTRY_GROUPS = (() => {
+  const byCountry = {};
+  LOCATIONS.forEach((l) => {
+    if (!byCountry[l.country]) {
+      byCountry[l.country] = { country: l.country, cities: [] };
+    }
+    byCountry[l.country].cities.push({
+      ...l,
+      projects: PROJECTS.filter((p) => p.locationKey === l.key).sort(byRank),
+    });
+  });
+  return Object.values(byCountry).sort((a, b) => {
+    const aTotal = a.cities.reduce((sum, c) => sum + c.projects.length, 0);
+    const bTotal = b.cities.reduce((sum, c) => sum + c.projects.length, 0);
+    return bTotal - aTotal;
+  });
+})();
+
 Object.assign(window, {
-  EX, PROJECTS, SECTORS, LOCATIONS, LOCATION_GROUPS, SECTOR_STYLE,
+  EX, PROJECTS, SECTORS, LOCATIONS, LOCATION_GROUPS, COUNTRY_GROUPS, SECTOR_STYLE,
   relatedBySector, projectsByExpertise,
 });
