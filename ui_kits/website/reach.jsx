@@ -118,7 +118,7 @@ function ReachHero() {
       <div className="wrap ahero__inner">
         <a className="dhero__back" href="index.html"><i data-lucide="arrow-left" style={{ width: 15, height: 15 }}></i> Home</a>
         <span className="dhero__sector">Global Reach</span>
-        <h1 className="ahero__title">Projects across<br />five regions, three countries</h1>
+        <h1 className="ahero__title">Landmark projects<br />across seven cities</h1>
         <span className="ahero__role">Four decades of delivery spanning Central Africa, the Gulf, and South Asia.</span>
       </div>
     </header>
