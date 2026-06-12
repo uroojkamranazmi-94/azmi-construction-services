@@ -154,13 +154,14 @@ const JOURNEY = [
     photos: ['images/about/doha/1.jpg', 'images/about/doha/2.jpg', 'images/about/doha/3.jpg'],
     title: 'Building Excellence', place: 'Qatar',
     text: 'For six years, he directed flagship projects across Qatar\u2019s rapid expansion — shopping malls, mixed-use developments, and hospitality complexes for major regional clients. Significant in scale and visibility, Doha refined his ability to manage world-class development on compressed timelines. It also deepened his command of ready-mix concrete production at scale — building on his Gulf experience as GM of ready-mix operations in Abu Dhabi (Redco Group) and as COO of the NLC-Izhar JV ready-mix concrete plants.' },
-  { tag: 'Africa', ico: 'trending-up', tone: 2,
+ { tag: 'Africa', ico: 'trending-up', tone: 2,
     photos: ['images/about/parkland/2.jpeg', 'images/about/parkland/p8.jpeg', 'images/about/parkland/6.jpeg', 'images/about/parkland/1.jpeg', 'images/about/parkland/p9.jpeg'],
     title: 'Building Systems, Not Just Buildings', place: 'Parkland · Kinshasa · 2021',
-    text: 'In 2021, he took the helm at Parkland in Kinshasa. What he accomplished there defined his approach to leadership. He scaled the company through strategic expansion into ready-mix concrete operations and in-house real estate development, transforming the batching plant into a high-profit revenue stream. He built operational systems where they didn\u2019t exist, mentored emerging leaders, and established standards of excellence in a challenging market.' },
+    text: 'In 2021, he took the helm at Parkland in Kinshasa. What he accomplished there defined his approach to leadership. He scaled the company through strategic expansion into ready-mix concrete operations and in-house real estate development, transforming the batching plant into a high-profit revenue stream. He built operational systems where they didn\'t exist, mentored emerging leaders, and established standards of excellence in a challenging market.' },
+  { tag: 'Your Project', ico: 'compass', tone: 1,
     photos: ['images/about/today/site-visit.jpeg', 'images/about/today/2.jpeg', 'images/about/today/3.jpeg'],
     title: 'Your Next Landmark Project', place: 'Azmi Construction Services',
-    text: 'Azmi Construction Services exists for enterprises undertaking complex urban development across continents. Kamran brings operational rigor forged across 40 years of delivery — from technical execution to strategic scaling to cross-cultural team leadership. He has built in emerging markets and developed economies, scaled operations, managed risk across borders, and transformed ambitious visions into delivered reality. Whether you\u2019re expanding into new regions, managing multinational teams, or executing landmark projects, his expertise translates to your success.' },
+    text: 'Azmi Construction Services exists for enterprises undertaking complex urban development across continents. Kamran brings operational rigor forged across 40 years of delivery — from technical execution to strategic scaling to cross-cultural team leadership. He has built in emerging markets and developed economies, scaled operations, managed risk across borders, and transformed ambitious visions into delivered reality. Whether you\'re expanding into new regions, managing multinational teams, or executing landmark projects, his expertise translates to your success.' },
 ];
 
 function JourneyTimeline() {
