@@ -199,10 +199,10 @@ const GALLERY = {
     'images/saarc-chamber-1.jpg',
     'images/saarc-chamber-2.jpg',
   ],
-     'redco-precast': ['images/redco-precast/1.jpg'],
-  'redco-readymix': ['images/redco-readymix/1.jpg'],
-  'nlc-izhar': ['images/nlc-izhar/1.jpg'],
-  'parkland-readymix': ['images/parkland-readymix/1.jpg'],
+  'redco-precast': ['images/redco-precast-1.jpg'],
+  'redco-readymix': ['images/redco-readymix-1.jpg'],
+  'nlc-izhar': ['images/nlc-izhar-1.jpg'],
+  'parkland-readymix': ['images/parkland-readymix-1.jpg'],
   ],
 };
 
