@@ -50,6 +50,8 @@ const LOCATIONS = [
   { key: 'islamabad',  city: 'Islamabad',  country: 'Pakistan', loc: 'Islamabad, Pakistan',  region: 'South Asia',     lat: 33.72, lng: 73.10 },
   { key: 'rawalpindi', city: 'Rawalpindi', country: 'Pakistan', loc: 'Rawalpindi, Pakistan', region: 'South Asia',     lat: 32.90, lng: 72.55 },
   { key: 'karachi',    city: 'Karachi',    country: 'Pakistan', loc: 'Karachi, Pakistan',    region: 'South Asia',     lat: 24.86, lng: 67.01 },
+  { key: 'abu-dhabi',  city: 'Abu Dhabi',  country: 'UAE',      loc: 'Abu Dhabi, UAE',       region: 'Gulf',           lat: 24.45, lng: 54.37 },
+  { key: 'kuwait',     city: 'Kuwait City',country: 'Kuwait',   loc: 'Kuwait City, Kuwait',  region: 'Gulf',           lat: 29.37, lng: 47.97 },
 ];
 const LOC = Object.fromEntries(LOCATIONS.map((l) => [l.key, l]));
 
