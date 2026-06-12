@@ -137,8 +137,8 @@ function ReachMapSection() {
         <div className="reach2__tabs">
           {LOCATION_GROUPS.map((l) => (
             <button key={l.key} className={`reach2__tab ${locKey === l.key ? 'on' : ''}`} onClick={() => setLocKey(l.key)}>
-              <span className="reach2__tab-n">{l.city}</span>
-              <span className="reach2__tab-c">{l.projects.length} project{l.projects.length > 1 ? 's' : ''}</span>
+              <span className="reach2__tab-n">{l.country}</span>
+              <span className="reach2__tab-c">{l.city}</span>
             </button>
           ))}
         </div>
