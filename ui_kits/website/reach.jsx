@@ -128,16 +128,12 @@ function ReachHero() {
 /* ---------- MAP + LOCATION SELECTOR ---------- */
 function ReachMapSection() {
   const [countryKey, setCountryKey] = useStateR(COUNTRY_GROUPS[0].country);
-  const [cityKey, setCityKey] = useStateR(COUNTRY_GROUPS[0].cities[0].key);
-  useLucide(countryKey, cityKey);
+  useLucide(countryKey);
   
   const curCountry = COUNTRY_GROUPS.find((c) => c.country === countryKey);
-  const curCity = curCountry?.cities.find((c) => c.key === cityKey);
   
   const handleCountryChange = (country) => {
     setCountryKey(country);
-    const firstCity = COUNTRY_GROUPS.find((c) => c.country === country)?.cities[0];
-    if (firstCity) setCityKey(firstCity.key);
   };
 
   return (
@@ -154,38 +150,28 @@ function ReachMapSection() {
           ))}
         </div>
 
-        {curCountry && curCountry.cities.length > 1 && (
-          <div className="reach2__city-selector">
-            {curCountry.cities.map((city) => (
-              <button key={city.key} className={`reach2__city-btn ${cityKey === city.key ? 'on' : ''}`} onClick={() => setCityKey(city.key)}>
-                {city.city}
-              </button>
-            ))}
-          </div>
-        )}
-
-        <WorldMap activeRegion={cityKey} onRegionPick={setCityKey} projects={PROJECTS} />
+        <WorldMap activeRegion={countryKey} onRegionPick={() => {}} projects={PROJECTS} />
         
-        {curCity && (
-          <div className="reach2__panel">
+        {curCountry && curCountry.cities.map((city) => (
+          <div key={city.key} className="reach2__panel">
             <div className="reach2__panel-head">
               <div>
-                <span className="reach2__kicker">{curCity.country}</span>
-                <h3 className="reach2__name">{curCity.city}</h3>
+                <span className="reach2__kicker">{city.country}</span>
+                <h3 className="reach2__name">{city.city}</h3>
               </div>
               <div className="reach2__stats">
-                <div className="reach2__stat"><span className="v"><Counter to={curCity.projects.length} /></span><span className="k">Projects</span></div>
+                <div className="reach2__stat"><span className="v"><Counter to={city.projects.length} /></span><span className="k">Projects</span></div>
               </div>
             </div>
-            {curCity.key === 'abu-dhabi' ? (
+            {city.key === 'abu-dhabi' ? (
               <p className="reach2__note">Precast construction and ready-mix concrete operations. Further information available upon request.</p>
-            ) : curCity.key === 'kuwait' ? (
+            ) : city.key === 'kuwait' ? (
               <p className="reach2__note">Development of temporary housing and military camp facilities for the Armed Forces. Further information available upon request.</p>
             ) : (
               <>
-                <p className="reach2__note">{curCity.projects.length} project{curCity.projects.length > 1 ? 's' : ''} delivered in {curCity.city}, {curCity.country}.</p>
+                <p className="reach2__note">{city.projects.length} project{city.projects.length > 1 ? 's' : ''} delivered in {city.city}, {city.country}.</p>
                 <div className="reach2__projects">
-                  {curCity.projects.map((p) => (
+                  {city.projects.map((p) => (
                     <a key={p.id} className="reach2__proj" href={`project.html?id=${p.id}`} data-hover>
                       <span className={`reach2__proj-ic tone${p.tone}`}><i data-lucide={p.ico} style={{ width: 18, height: 18 }}></i></span>
                       <span className="reach2__proj-bd">
@@ -199,7 +185,7 @@ function ReachMapSection() {
               </>
             )}
           </div>
-        )}
+        ))}
       </div>
     </section>
   );
