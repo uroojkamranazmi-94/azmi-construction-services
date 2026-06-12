@@ -127,59 +127,83 @@ function ReachHero() {
 
 /* ---------- MAP + LOCATION SELECTOR ---------- */
 function ReachMapSection() {
-  const [locKey, setLocKey] = useStateR(LOCATION_GROUPS[0].key);
-  useLucide(locKey);
-  const cur = LOCATION_GROUPS.find((l) => l.key === locKey);
+  const [countryKey, setCountryKey] = useStateR(COUNTRY_GROUPS[0].country);
+  const [cityKey, setCityKey] = useStateR(COUNTRY_GROUPS[0].cities[0].key);
+  useLucide(countryKey, cityKey);
+  
+  const curCountry = COUNTRY_GROUPS.find((c) => c.country === countryKey);
+  const curCity = curCountry?.cities.find((c) => c.key === cityKey);
+  
+  const handleCountryChange = (country) => {
+    setCountryKey(country);
+    const firstCity = COUNTRY_GROUPS.find((c) => c.country === country)?.cities[0];
+    if (firstCity) setCityKey(firstCity.key);
+  };
+
   return (
     <section className="reach2" id="reach">
       <div className="wrap">
         <SectionHead index="01" eyebrow="Where the work has taken us" light max="22em" />
+        
         <div className="reach2__tabs">
-          {LOCATION_GROUPS.map((l) => (
-            <button key={l.key} className={`reach2__tab ${locKey === l.key ? 'on' : ''}`} onClick={() => setLocKey(l.key)}>
-              <span className="reach2__tab-n">{l.country}</span>
-              <span className="reach2__tab-c">{l.city}</span>
+          {COUNTRY_GROUPS.map((c) => (
+            <button key={c.country} className={`reach2__tab ${countryKey === c.country ? 'on' : ''}`} onClick={() => handleCountryChange(c.country)}>
+              <span className="reach2__tab-n">{c.country}</span>
+              <span className="reach2__tab-c">{c.cities.length} cit{c.cities.length > 1 ? 'ies' : 'y'}</span>
             </button>
           ))}
         </div>
-        <WorldMap activeRegion={locKey} onRegionPick={setLocKey} projects={PROJECTS} />
-        <div className="reach2__panel">
-          <div className="reach2__panel-head">
-            <div>
-              <span className="reach2__kicker">{cur.country}</span>
-              <h3 className="reach2__name">{cur.city}</h3>
-            </div>
-            <div className="reach2__stats">
-              <div className="reach2__stat"><span className="v"><Counter to={cur.projects.length} /></span><span className="k">Projects</span></div>
-            </div>
+
+        {curCountry && curCountry.cities.length > 1 && (
+          <div className="reach2__city-selector">
+            {curCountry.cities.map((city) => (
+              <button key={city.key} className={`reach2__city-btn ${cityKey === city.key ? 'on' : ''}`} onClick={() => setCityKey(city.key)}>
+                {city.city}
+              </button>
+            ))}
           </div>
-          {cur.key === 'abu-dhabi' ? (
-            <p className="reach2__note">Precast construction and ready-mix concrete operations. Further information available upon request.</p>
-          ) : cur.key === 'kuwait' ? (
-            <p className="reach2__note">Development of temporary housing and military camp facilities for the Armed Forces. Further information available upon request.</p>
-          ) : (
-            <>
-              <p className="reach2__note">{cur.projects.length} project{cur.projects.length > 1 ? 's' : ''} delivered in {cur.city}, {cur.country}.</p>
-              <div className="reach2__projects">
-                {cur.projects.map((p) => (
-                  <a key={p.id} className="reach2__proj" href={`project.html?id=${p.id}`} data-hover>
-                    <span className={`reach2__proj-ic tone${p.tone}`}><i data-lucide={p.ico} style={{ width: 18, height: 18 }}></i></span>
-                    <span className="reach2__proj-bd">
-                      <span className="reach2__proj-n">{p.name}</span>
-                      <span className="reach2__proj-m">{p.sector}</span>
-                    </span>
-                    <i data-lucide="arrow-up-right" className="reach2__proj-go" style={{ width: 16, height: 16 }}></i>
-                  </a>
-                ))}
+        )}
+
+        <WorldMap activeRegion={cityKey} onRegionPick={setCityKey} projects={PROJECTS} />
+        
+        {curCity && (
+          <div className="reach2__panel">
+            <div className="reach2__panel-head">
+              <div>
+                <span className="reach2__kicker">{curCity.country}</span>
+                <h3 className="reach2__name">{curCity.city}</h3>
               </div>
-            </>
-          )}
-        </div>
+              <div className="reach2__stats">
+                <div className="reach2__stat"><span className="v"><Counter to={curCity.projects.length} /></span><span className="k">Projects</span></div>
+              </div>
+            </div>
+            {curCity.key === 'abu-dhabi' ? (
+              <p className="reach2__note">Precast construction and ready-mix concrete operations. Further information available upon request.</p>
+            ) : curCity.key === 'kuwait' ? (
+              <p className="reach2__note">Development of temporary housing and military camp facilities for the Armed Forces. Further information available upon request.</p>
+            ) : (
+              <>
+                <p className="reach2__note">{curCity.projects.length} project{curCity.projects.length > 1 ? 's' : ''} delivered in {curCity.city}, {curCity.country}.</p>
+                <div className="reach2__projects">
+                  {curCity.projects.map((p) => (
+                    <a key={p.id} className="reach2__proj" href={`project.html?id=${p.id}`} data-hover>
+                      <span className={`reach2__proj-ic tone${p.tone}`}><i data-lucide={p.ico} style={{ width: 18, height: 18 }}></i></span>
+                      <span className="reach2__proj-bd">
+                        <span className="reach2__proj-n">{p.name}</span>
+                        <span className="reach2__proj-m">{p.sector}</span>
+                      </span>
+                      <i data-lucide="arrow-up-right" className="reach2__proj-go" style={{ width: 16, height: 16 }}></i>
+                    </a>
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
+        )}
       </div>
     </section>
   );
 }
-
 /* ---------- REGIONAL SUMMARY STRIP ---------- */
 function ReachSummary() {
   useLucide();
