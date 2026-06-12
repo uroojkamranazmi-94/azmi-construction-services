@@ -45,16 +45,19 @@ function ReachTeaser() {
     <section className="reach-teaser" id="reach">
       <div className="reach-teaser__bg" aria-hidden="true"></div>
       <div className="wrap reach-teaser__inner">
-        <SectionHead index="03" eyebrow="Global Reach" light title="Delivery across five regions" max="18em" />
-        <p className="reach-teaser__lead">Landmark projects across Central Africa, the Gulf, and South Asia — five regions, three countries, one consistent standard.</p>
+        <SectionHead index="03" eyebrow="Global Reach" light title="Delivery across four continents" max="18em" />
+        <p className="reach-teaser__lead">Landmark projects across Central Africa, the Gulf, and South Asia — seven cities, four countries, one consistent standard.</p>
         <div className="reach-teaser__regions">
-          {LOCATION_GROUPS.map((l) => (
-            <a key={l.key} className="reach-teaser__region" href="projects.html#reach" data-hover>
-              <span className="reach-teaser__r-n">{l.city}</span>
-              <span className="reach-teaser__r-m">{l.country}</span>
-              <span className="reach-teaser__r-c">{l.projects.length} project{l.projects.length > 1 ? 's' : ''}</span>
-            </a>
-          ))}
+          {COUNTRY_GROUPS.map((c) => {
+            const totalProjects = c.cities.reduce((sum, city) => sum + city.projects.length, 0);
+            return (
+              <a key={c.country} className="reach-teaser__region" href="projects.html#reach" data-hover>
+                <span className="reach-teaser__r-n">{c.country}</span>
+                <span className="reach-teaser__r-m">{c.cities.map(city => city.city).join(', ')}</span>
+                <span className="reach-teaser__r-c">{totalProjects} project{totalProjects > 1 ? 's' : ''}</span>
+              </a>
+            );
+          })}
         </div>
         <Button variant="ghost-dark" icon="arrow-right" href="projects.html">View the world map</Button>
       </div>
