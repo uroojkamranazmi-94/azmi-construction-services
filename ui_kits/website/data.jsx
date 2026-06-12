@@ -90,6 +90,10 @@ const RAW = [
   { rank: 18, id: 'ufone-tower',      name: 'Ufone Tower',                       lk: 'islamabad',  prim: 'Office',      secs: ['Office'], rawSec: 'Office Building', ex: ['cm'], desc: '' },
   { rank: 19, id: 'sanco-redco', name: 'Sanco Redco Precast LLC', lk: 'abu-dhabi', prim: 'Commercial', secs: ['Commercial'], rawSec: 'Precast Concrete Operations', ex: ['cm','ops','pnl','strat','pcd'], desc: 'Advanced precast concrete manufacturing and operations facility.' },
   { rank: 20, id: 'saarc-chamber', name: 'SAARC Chamber & Commerce Headquarters', lk: 'islamabad', prim: 'Office', secs: ['Office'], rawSec: 'Office Building', ex: ['cm','ops','pnl','strat','pde'], desc: 'Institutional headquarters for the South Asian Association for Regional Cooperation Chamber of Commerce.' },
+   { rank: 21, id: 'redco-precast', name: 'Redco Group Precast', lk: 'doha', prim: 'Commercial', secs: ['Commercial'], rawSec: 'Precast Concrete Operations', ex: ['pcd','ops'], desc: 'Advanced precast concrete manufacturing facility.' },
+  { rank: 22, id: 'redco-readymix', name: 'Redco Swaidi Ready-Mix', lk: 'abu-dhabi', prim: 'Commercial', secs: ['Commercial'], rawSec: 'Ready-Mix Concrete Operations', ex: ['pcd','ops','pnl'], desc: 'Ready-mix concrete production and operations management.' },
+  { rank: 23, id: 'nlc-izhar', name: 'NLC Izhar Ready-Mix', lk: 'islamabad', prim: 'Commercial', secs: ['Commercial'], rawSec: 'Ready-Mix Concrete Operations', ex: ['pcd','ops','pnl'], desc: 'Joint venture ready-mix concrete operations.' },
+  { rank: 24, id: 'parkland-readymix', name: 'Parkland Ready-Mix', lk: 'kinshasa', prim: 'Commercial', secs: ['Commercial'], rawSec: 'Ready-Mix Concrete Operations', ex: ['pcd','ops','pnl'], desc: 'Strategic expansion into ready-mix concrete operations.' },
 ];
 
 /* ---- Per-project photo galleries ----
@@ -194,6 +198,11 @@ const GALLERY = {
   'saarc-chamber': [
     'images/saarc-chamber-1.jpg',
     'images/saarc-chamber-2.jpg',
+  ],
+     'redco-precast': ['images/redco-precast/1.jpg'],
+  'redco-readymix': ['images/redco-readymix/1.jpg'],
+  'nlc-izhar': ['images/nlc-izhar/1.jpg'],
+  'parkland-readymix': ['images/parkland-readymix/1.jpg'],
   ],
 };
 
