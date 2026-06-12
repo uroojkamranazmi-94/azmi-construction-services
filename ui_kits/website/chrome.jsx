@@ -42,7 +42,7 @@ function Nav({ active, onNav, page }) {
             {l.label}
           </a>
         ))}
-        <a className="nav__cta" href="consultation.html">
+        <a className="nav__cta nav-cta-desktop" href="consultation.html">
           Start a Consultation
         </a>
       </div>
