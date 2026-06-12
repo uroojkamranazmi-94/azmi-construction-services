@@ -88,6 +88,8 @@ const RAW = [
   { rank: 16, id: 'nust-hostels',     name: 'NUST Hostels',                      lk: 'islamabad',  prim: 'Residential', secs: ['Residential'], rawSec: 'Residential construction', ex: EX_FULLP, desc: '' },
   { rank: 17, id: 'private-villa',    name: 'Private Luxury Villa',              lk: 'kinshasa',   prim: 'Residential', secs: ['Residential'], rawSec: 'Residential construction', ex: EX_FULL, desc: '' },
   { rank: 18, id: 'ufone-tower',      name: 'Ufone Tower',                       lk: 'islamabad',  prim: 'Office',      secs: ['Office'], rawSec: 'Office Building', ex: ['cm'], desc: '' },
+  { rank: 19, id: 'sanco-redco', name: 'Sanco Redco Precast LLC', lk: 'abu-dhabi', prim: 'Commercial', secs: ['Commercial'], rawSec: 'Precast Concrete Operations', ex: ['cm','ops','pnl','strat','pcd'], desc: 'Advanced precast concrete manufacturing and operations facility.' },
+  { rank: 20, id: 'saarc-chamber', name: 'SAARC Chamber & Commerce Headquarters', lk: 'islamabad', prim: 'Office', secs: ['Office'], rawSec: 'Office Building', ex: ['cm','ops','pnl','strat','pde'], desc: 'Institutional headquarters for the South Asian Association for Regional Cooperation Chamber of Commerce.' },
 ];
 
 /* ---- Per-project photo galleries ----
@@ -185,6 +187,13 @@ const GALLERY = {
     'images/ufone-tower/2.jpg',
     'images/ufone-tower/1.jpg',
     'images/ufone-tower/3.png',
+  ],
+  'sanco-redco': [
+    'images/sanco-redco/1.jpg',
+  ],
+  'saarc-chamber': [
+    'images/saarc-chamber/1.jpg',
+    'images/saarc-chamber/2.jpg',
   ],
 };
 
