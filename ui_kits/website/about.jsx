@@ -135,7 +135,7 @@ function Bio() {
 /* ---------- INTERACTIVE JOURNEY TIMELINE ---------- */
 const JOURNEY = [
   { tag: 'Foundation', ico: 'graduation-cap', tone: 1,
-    photos: ['images/about/foundation/2.jpeg', 'images/about/foundation/1.jpeg', 'images/about/foundation/6.jpeg', 'images/about/foundation/5.jpeg', 'images/about/foundation/4.jpeg', 'images/about/foundation/3.jpeg'],
+    photos: ['images/about/foundation/2.jpeg', 'images/about/foundation/1.jpeg'],
     title: 'The Foundation', place: 'Kharkov Institute · USSR',
     text: 'As a teenager, Kamran Azmi earned a prestigious scholarship to study civil engineering at the Kharkov Institute of Civil Engineering in the former Soviet Union — one of Europe\u2019s most rigorous technical institutes. He emerged equipped with advanced training in building construction management and early exposure to international operating environments.' },
   { tag: 'Global Expertise', ico: 'globe', tone: 0,
