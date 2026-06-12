@@ -54,7 +54,6 @@ function ReachTeaser() {
               <a key={c.country} className="reach-teaser__region" href="projects.html#reach" data-hover>
                 <span className="reach-teaser__r-n">{c.country}</span>
                 <span className="reach-teaser__r-m">{c.cities.map(city => city.city).join(', ')}</span>
-                <span className="reach-teaser__r-c">{totalProjects} project{totalProjects > 1 ? 's' : ''}</span>
               </a>
             );
           })}
