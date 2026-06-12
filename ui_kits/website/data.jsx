@@ -188,12 +188,12 @@ const GALLERY = {
     'images/ufone-tower/1.jpg',
     'images/ufone-tower/3.png',
   ],
-  'sanco-redco': [
-    'images/sanco-redco/1.jpg',
+'sanco-redco': [
+    'images/sanco-redco-1.jpg',
   ],
   'saarc-chamber': [
-    'images/saarc-chamber/1.jpg',
-    'images/saarc-chamber/2.jpg',
+    'images/saarc-chamber-1.jpg',
+    'images/saarc-chamber-2.jpg',
   ],
 };
 
