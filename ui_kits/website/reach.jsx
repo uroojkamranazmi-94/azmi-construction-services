@@ -175,17 +175,6 @@ function ReachMapSection() {
             </>
           )}
         </div>
-              <a key={p.id} className="reach2__proj" href={`project.html?id=${p.id}`} data-hover>
-                <span className={`reach2__proj-ic tone${p.tone}`}><i data-lucide={p.ico} style={{ width: 18, height: 18 }}></i></span>
-                <span className="reach2__proj-bd">
-                  <span className="reach2__proj-n">{p.name}</span>
-                  <span className="reach2__proj-m">{p.sector}</span>
-                </span>
-                <i data-lucide="arrow-up-right" className="reach2__proj-go" style={{ width: 16, height: 16 }}></i>
-              </a>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
