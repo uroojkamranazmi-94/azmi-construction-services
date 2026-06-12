@@ -159,9 +159,6 @@ function ReachMapSection() {
                 <span className="reach2__kicker">{city.country}</span>
                 <h3 className="reach2__name">{city.city}</h3>
               </div>
-              <div className="reach2__stats">
-                <div className="reach2__stat"><span className="v"><Counter to={city.projects.length} /></span><span className="k">Projects</span></div>
-              </div>
             </div>
             {city.key === 'abu-dhabi' ? (
               <p className="reach2__note">Precast construction and ready-mix concrete operations. Further information available upon request.</p>
