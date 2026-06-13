@@ -142,8 +142,8 @@ const JOURNEY = [
     text: 'As a teenager, Kamran Azmi earned a prestigious scholarship to study civil engineering at the Kharkov Institute of Civil Engineering in the former Soviet Union — one of Europe\u2019s most rigorous technical institutes. He emerged equipped with advanced training in building construction management and early exposure to international operating environments.' },
   { tag: 'Global Expertise', ico: 'globe', tone: 0,
     photos: ['images/about/operations/2.jpeg', 'images/about/operations/1.jpeg'],
-    title: 'International Operations', place: 'Pakistan · Qatar · Kuwait · UAE',
-    text: 'His career was built across multiple continents. He spent formative years in Pakistan, Qatar, Kuwait, and the UAE, translating technical mastery into operational leadership on demanding projects. Each region expanded his understanding of construction across different markets and cultures. Over the course of his career, he has become fluent in English, Russian, Urdu, and French, navigating different regional contexts with ease.' },
+    title: 'International Operations', place: 'Pakistan · Qatar · Kuwait · UAE · DRC',
+    text: 'His career was built across multiple continents. He spent formative years in Pakistan, Qatar, Kuwait, and the UAE, translating technical mastery into operational leadership on demanding projects. Each region expanded his understanding of construction across different markets and cultures. His expertise eventually extended to Africa, establishing operations in the Democratic Republic of Congo. Over the course of his career, he has become fluent in English, Russian, Urdu, French, and Arabic, navigating different regional contexts with ease.'
   { tag: 'Versatility', ico: 'layers', tone: 2,
     photos: ['images/about/leadership/2.jpeg', 'images/about/leadership/1.jpeg', 'images/about/leadership/redco-readymix.png', 'images/about/leadership/3.jpeg'],
     title: 'Diversified Leadership', place: 'Cross-Industry Operations',
