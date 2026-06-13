@@ -126,7 +126,7 @@ function Bio() {
         </div>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <Reveal delay={160} style={{ width: '100%', maxWidth: '380px' }}>
-            <PhotoGallery photos={['images/about/kamran-portrait.jpeg']} tone={1} ico="user" label="Kamran Azmi" aspect="3 / 4" />
+            <PhotoGallery photos={['images/kamran-portrait.jpeg']} tone={1} ico="user" label="Kamran Azmi" aspect="3 / 4" />
           </Reveal>
         </div>
       </div>
