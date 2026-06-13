@@ -95,6 +95,8 @@ const RAW = [
   { rank: 22, id: 'redco-readymix', name: 'Redco Swaidi Ready-Mix', lk: 'abu-dhabi', prim: 'Commercial', secs: ['Commercial'], rawSec: 'Ready-Mix Concrete Operations', ex: ['pcd','ops','pnl'], desc: 'Ready-mix concrete production and operations management.' },
   { rank: 23, id: 'nlc-izhar', name: 'NLC Izhar Ready-Mix', lk: 'islamabad', prim: 'Commercial', secs: ['Commercial'], rawSec: 'Ready-Mix Concrete Operations', ex: ['pcd','ops','pnl'], desc: 'Joint venture ready-mix concrete operations.' },
   { rank: 24, id: 'parkland-readymix', name: 'Parkland Ready-Mix', lk: 'kinshasa', prim: 'Commercial', secs: ['Commercial'], rawSec: 'Ready-Mix Concrete Operations', ex: ['pcd','ops','pnl'], desc: 'Strategic expansion into ready-mix concrete operations.' },
+   { rank: 25, id: 'corporate-hq-kinshasa', name: 'Corporate Head Office Building', lk: 'kinshasa', prim: 'Office', secs: ['Office'], rawSec: 'Office Building', ex: ['cm','ops','pde'],
+    desc: 'A contemporary corporate headquarters in Kinshasa featuring modern office design with sophisticated architecture and operational systems. The building serves as a professional hub for enterprise operations in Central Africa.' },
 ];
 
 /* ---- Per-project photo galleries ----
@@ -204,6 +206,9 @@ const GALLERY = {
   'redco-readymix': ['images/redco-readymix-1.jpg'],
   'nlc-izhar': ['images/nlc-izhar-1.jpg'],
   'parkland-readymix': ['images/parkland-readymix-1.jpg'],
+   'corporate-hq-kinshasa': [
+    'images/corporate-hq-kinshasa.jpeg',
+  ],
 };
 
 /* full project name for the few that were shortened above (used in titles) */
