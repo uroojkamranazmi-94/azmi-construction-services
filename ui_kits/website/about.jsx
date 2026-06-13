@@ -113,20 +113,22 @@ function PhotoGallery({ photos = [], tone = 1, ico = 'image', aspect, label = 'P
 function Bio() {
   return (
     <section className="bio">
-      <div className="wrap bio__grid">
-        <Reveal>
-          <SectionHead index="01" eyebrow="My Story" title="Building Excellence Across Continents" />
-        </Reveal>
-        <Reveal delay={100} className="bio__body">
-          <p>Kamran Azmi's 40-year career spans construction, real estate development, and operations leadership across five continents. He has progressed from technical mastery to strategic enterprise leadership, managing multimillion-dollar projects, multinational teams, and complex international operations.</p>
-          <p>A recognized specialist in ready-mix concrete operations, he has transformed readymix business into high-margin profit centers across different market segments, applying strategic operational discipline and P&L management to drive substantial profitability gains.</p>
-          <p>His trajectory reflects disciplined growth: each role building on the last, each region expanding his understanding of how to deliver excellence across different markets and operating environments. Today, he serves as an executive advisor to enterprises undertaking ambitious urban development projects globally.</p>
-        </Reveal>
-      </div>
-      <div className="wrap">
-        <Reveal delay={160} className="bio__photo">
-          <PhotoGallery photos={['images/about/mystory.jpeg']} tone={1} ico="user" label="Kamran Azmi" aspect="21 / 9" />
-        </Reveal>
+      <div className="wrap" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'start' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+          <Reveal>
+            <SectionHead index="01" eyebrow="My Story" title="Building Excellence Across Continents" />
+          </Reveal>
+          <Reveal delay={100} className="bio__body">
+            <p>Kamran Azmi's 40-year career spans construction, real estate development, and operations leadership across five continents. He has progressed from technical mastery to strategic enterprise leadership, managing multimillion-dollar projects, multinational teams, and complex international operations.</p>
+            <p>A recognized specialist in ready-mix concrete operations, he has transformed readymix business into high-margin profit centers across different market segments, applying strategic operational discipline and P&L management to drive substantial profitability gains.</p>
+            <p>His trajectory reflects disciplined growth: each role building on the last, each region expanding his understanding of how to deliver excellence across different markets and operating environments. Today, he serves as an executive advisor to enterprises undertaking ambitious urban development projects globally.</p>
+          </Reveal>
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <Reveal delay={160} style={{ width: '100%', maxWidth: '380px' }}>
+            <PhotoGallery photos={['images/about/kamran-portrait.jpeg']} tone={1} ico="user" label="Kamran Azmi" aspect="3 / 4" />
+          </Reveal>
+        </div>
       </div>
     </section>
   );
